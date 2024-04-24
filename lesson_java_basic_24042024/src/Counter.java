@@ -4,18 +4,31 @@
 
 public class Counter {
 
+//    public static void main(String[] args) {
+//
+//        for (int count = 1; count <= 10; count++) {
+//            System.out.println(count);
+//        }
+//
+//        System.out.println("---------");
+//
+//        for (int count = 10; count >= 1; count--) {
+//            System.out.println(count);
+//        }
+//
+//
+//    }
+
     public static void main(String[] args) {
 
-        for (int count = 1; count <= 10; count++) {
-            System.out.println(count);
+        int countInc = 1;
+        int countDecr = 10;
+
+        for (; countInc <= 10 && countDecr>=1; countInc++, countDecr--) {
+            System.out.println(countInc);
+            System.out.println(countDecr);
+            }
         }
-
-        System.out.println("---------");
-
-        for (int count = 10; count >= 1; count--) {
-            System.out.println(count);
-        }
-
 
     }
-}
+
