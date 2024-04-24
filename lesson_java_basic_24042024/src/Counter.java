@@ -19,16 +19,25 @@ public class Counter {
 //
 //    }
 
+//    public static void main(String[] args) {
+//
+//        int countInc = 1;
+//        int countDecr = 10;
+//
+//        for (; countInc <= 10 && countDecr>=1; countInc++, countDecr--) {
+//            System.out.println(countInc);
+//            System.out.println(countDecr);
+//            }
+//        }
+
     public static void main(String[] args) {
-
-        int countInc = 1;
-        int countDecr = 10;
-
-        for (; countInc <= 10 && countDecr>=1; countInc++, countDecr--) {
-            System.out.println(countInc);
-            System.out.println(countDecr);
+        for (int i = 1, y = 1; i >= 1 && i <= 10; i += y) {
+            System.out.println(i);
+            if (i == 10) {
+                y = -1; // Изменяем направление на обратное
             }
         }
+    }
 
     }
 
