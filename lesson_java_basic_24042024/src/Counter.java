@@ -30,11 +30,21 @@ public class Counter {
 //            }
 //        }
 
+//    public static void main(String[] args) {
+//        for (int i = 1, y = 1; i >= 1 && i <= 10; i += y) {
+//            System.out.println(i);
+//            if (i == 10) {
+//                y = -1; // Изменяем направление на обратное
+//            }
+//        }
+//    }
+
     public static void main(String[] args) {
-        for (int i = 1, y = 1; i >= 1 && i <= 10; i += y) {
-            System.out.println(i);
-            if (i == 10) {
-                y = -1; // Изменяем направление на обратное
+        for (int i = 1; i < 20; i++) {
+            if(i > 10) {
+                System.out.println(20 - i);
+            } else {
+                System.out.println(i);
             }
         }
     }
