@@ -58,7 +58,7 @@ public class Examples {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Add 1st word");
         String userStr1 = scanner.nextLine();
-        System.out.println("Add 2nd word");
+        System.out.println("Add 2nd wor");
         String userStr2 = scanner.nextLine();
 
         String newUserStr1 = userStr1.substring(0, (userStr1.length() / 2));
