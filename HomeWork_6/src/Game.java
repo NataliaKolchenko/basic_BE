@@ -14,8 +14,9 @@ public class Game {
         //int startX = 0;
        // int startY = 0;
 
-        int locX = 0;
-        int locY = 0;
+        int x = 0;
+        int y = 0;
+
 
 //        String userAction = scanner.nextLine();
 
@@ -26,12 +27,14 @@ public class Game {
                 break;
             } else {
                 switch (userAction) {
-                    case "up": locY = locY + 1; break;
-                    case "down": locY = locY - 1; break;
-                    case "right": locX = locX + 1; break;
-                    case "left": locX = locX - 1; break;
+                    case "up": y = y + 1; break;
+                    case "down": y = y - 1; break;
+                    case "right": x = x + 1; break;
+                    case "left": x = x - 1; break;
+                    case "loc":
+                        System.out.println("Location is " + x + "." + y); break;
                 }
-                System.out.println("Location is " + locX + "." + locY);
+
             }
 
 
