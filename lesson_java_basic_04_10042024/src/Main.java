@@ -1,3 +1,5 @@
+package basic_BE.lesson_java_basic_04_10042024.src;
+
 import java.util.Scanner;
 d
 //-------------------------
