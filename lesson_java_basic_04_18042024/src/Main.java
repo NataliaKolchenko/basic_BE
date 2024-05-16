@@ -1,7 +1,9 @@
-import java.util.Scanner;
-
-public class Main {
-    public static void main(String[] args) {
+//package lesson_java_basic_04_18042024.src;
+//
+//import java.util.Scanner;
+//
+//public class Main {
+//    public static void main(String[] args) {
 
 //        Scanner scan = new Scanner(System.in);
 //        int userA = scan.nextInt();
@@ -19,12 +21,12 @@ public class Main {
 //        //если новый метод вызываемый в main
 //        System.out.println("print getReturnSum " + getReturnSumNew(userA,userB));
 
-        Cat tom = new Cat("Tom");
-        tom.sayName();
-
-        tom.setName("Bill");
-        System.out.println(tom.getName());
-    }
+//        Cat.Cat tom = new Cat("Tom");
+//        tom.sayName();
+//
+//        tom.setName("Bill");
+//        System.out.println(tom.getName());
+//    }
 
 //    public static void getSum (int a, int b) {
 //        System.out.println(a+b);
@@ -43,6 +45,4 @@ public class Main {
 //    }
 
 
-
-
-}
+//}
