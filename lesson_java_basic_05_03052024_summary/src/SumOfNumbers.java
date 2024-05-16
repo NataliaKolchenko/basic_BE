@@ -1,3 +1,5 @@
+package lesson_java_basic_05_03052024_summary.src;
+
 import java.util.Scanner;
 
 public class SumOfNumbers {
