@@ -1,3 +1,8 @@
+//Доработайте программу "Калькулятор" (версии 2) таким образом,
+//        чтобы она позволяла пользователю вводить вычисляемое математическое выражение
+//        в виде одной строки. Например, так 10.5*5+1-7.1 и последовательно выполняла
+//        бы указанные арифметические операции над аргументами.
+
 package org.example;
 
 import java.util.Scanner;
@@ -8,24 +13,27 @@ import static org.example.Utils.*;
 public class Calculator {
     public  void run() {
 
-        Scanner scan = new Scanner(System.in);
-
-
         char userAnswer = YES;
 
         do {
             if (userAnswer == YES) {
-                System.out.println(AMOUNT_OF_NUMBERS);
-                int amountNumbers = scan.nextInt();
+                int amountNumbers = amountUserNumbers();
                 double[] numbersArray = new double[amountNumbers];
+                char [] operatorArr = new char[amountNumbers-1];
+
                 for (int i = 0; i < amountNumbers; i++){
                     numbersArray[i] = insertDoubleData(ADD_NUMBER);
+                    if (i != amountNumbers-1) {
+                        operatorArr[i] = insertOperator(CHOSE_OPERATION);
+                    }
+
                 }
 
 
-                char operator = insertOperator(CHOSE_OPERATION);
-                printResult(numbersArray, operator, calculateResult (numbersArray, operator));
-
+                String currentResult = stringResult (numbersArray, operatorArr, calculateResult (numbersArray, operatorArr));
+                printResult(currentResult);
+                saveHistory(currentResult);
+                printHistory (HISTORY_ARRAY);
 
             } else {
                 System.out.println(CONTINUE_YES_NO_MSG);

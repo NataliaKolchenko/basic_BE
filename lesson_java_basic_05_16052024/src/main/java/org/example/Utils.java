@@ -8,23 +8,52 @@ public class Utils {
 
     private static Scanner scanner = new Scanner(System.in);
 
-    public static void printResult (double[] array, char operator, double result) {
+    public static void printResult (String str) {
+        System.out.println(str);
+    }
 
+
+    public static String stringResult (double[] array, char[] operator, double result) {
+
+        StringBuilder str = new StringBuilder();
         if (result == Double.POSITIVE_INFINITY || result == Double.NEGATIVE_INFINITY) {
             System.out.println(ERROR_MSG_DIVISION_ZERO);
         }
         else {
             for (int i = 0; i < array.length; i++) {
-
-                System.out.printf("%.2f", array[i]);
-                if (i != array.length-1){
-                    System.out.printf(" %c ", operator);
+                if (i == array.length-1) {
+                    str.append(String.format("%.2f", array[i]));
+                } else {
+                    str.append(String.format("%.2f",array[i]));
+                    str.append(" " + operator[i] + " ");
                 }
 
+
             }
-            System.out.printf(" = %.2f \n", result);
+            str.append(" = ");
+            str.append(String.format(" %.2f ", result));
+
+        }
+        return  String.valueOf(str);
+    }
+
+    public static void saveHistory (String expression) {
+
+        for (int i = 0;i < HISTORY_ARRAY.length; i++ ) {
+            if (HISTORY_ARRAY[i] == null) {
+                HISTORY_ARRAY[i] = expression;
+                break;
+            }
+
         }
 
+    }
+
+    public static void printHistory (String [] history) {
+        System.out.println("History " + HISTORY_SIZE +" expressions");
+        for (String strHistory : history) {
+            System.out.println(strHistory);
+        }
     }
 
     public static boolean isNotCorrectOperator (char operator) {
@@ -52,11 +81,12 @@ public class Utils {
     }
 
 
-    public static double calculateResult (double[] array, char operator) {
+    public static double calculateResult (double[] array, char [] operator) {
         double result = array[0];
 
         for (int i = 1; i < array.length; i++) {
-            switch (operator) {
+
+            switch (operator[i-1]) {
                 case PLUS:
                     result += array[i];
                     break;
@@ -76,6 +106,16 @@ public class Utils {
             };
         }
         return result;
+    }
+
+    public static int amountUserNumbers () {
+        System.out.println(AMOUNT_OF_NUMBERS);
+        int amountNumbers = scanner.nextInt();
+        while (amountNumbers < 2) {
+            System.out.println(MIN_AMOUNT_OF_NUMBERS_MSG);
+            amountNumbers = scanner.nextInt();
+        }
+        return amountNumbers;
     }
 
 }
