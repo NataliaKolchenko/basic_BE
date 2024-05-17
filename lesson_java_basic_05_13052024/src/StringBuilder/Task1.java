@@ -9,6 +9,7 @@ package StringBuilder;
 
 public class Task1 {
     public static void main(String[] args) {
+        System.out.println(Double.parseDouble("+12.78"));
         String str = "heyyyy";
         StringBuilder str1 = new StringBuilder();
         StringBuilder str2 = new StringBuilder(str);
