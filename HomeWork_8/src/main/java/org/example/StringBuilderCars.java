@@ -28,34 +28,10 @@ public class StringBuilderCars {
         queryCar.append(year != null ? "year = '" + year + "' AND " : "");
         queryCar.append(active != null ? "active = '" + active + "'" : "");
 
-
-
         System.out.println(queryCar);
-
-
-
-
-//        queryCar.append(paramCountry + " = \'" + country + "\' AND " + paramCity + " = \'" + city + "\' AND "  + paramModel + " = \'" + model + "\' AND "
-//                + paramYear + " = \'" + year + "\' AND "  + paramActive + " = \'" + active + "\'");
-//
-//        System.out.println(queryCar);
-
-
-
-
 
     }
 
-//    public static void main(String[] args) {
-//    StringBuilder query = new StringBuilder("SELECT c.brand, c.model, c.color, c.price FROM car c WHERE ");
-//    String parameter = "model";
-//    String value = "X6";
-//    query.append(parameter);
-//    query.append(" = ");
-//    query.append("\'" + value + "\'");
-//
-//    System.out.println(query);
-//}
 }
 
 
