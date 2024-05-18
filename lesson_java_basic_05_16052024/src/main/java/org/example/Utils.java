@@ -6,7 +6,7 @@ import static org.example.Constants.*;
 
 public class Utils {
 
-    private static Scanner scanner = new Scanner(System.in);
+//    private static Scanner scanner = new Scanner(System.in);
 
     public static void printResult (String str) {
         System.out.println(str);
@@ -57,10 +57,9 @@ public class Utils {
         }
     }
 
-    public static char insertCharData (String msg, String answer){
-        System.out.println(msg);
+    public static char insertCharData (String answer){
+//        System.out.println(msg);
         return answer.trim().toUpperCase().charAt(0);
-
     }
 
 
@@ -106,7 +105,7 @@ public class Utils {
                 lastSign = i;
                 count++;
             } else if (i == userString.length()-1){
-                numbersArr[count] = Double.parseDouble(userString.substring(lastSign,i+1));
+                numbersArr[count] = Double.parseDouble(userString.substring(lastSign+1,i+1));
             }
 
         }

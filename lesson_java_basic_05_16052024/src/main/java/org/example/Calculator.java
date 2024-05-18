@@ -18,7 +18,7 @@ public class Calculator {
 
         do {
             if (userAnswer == YES) {
-
+                System.out.println(ADD_NUMBER);
                 String userExpression = scanner.nextLine();
                 int amountNumbers = countOfNumbersInExpression(userExpression);
 
@@ -35,9 +35,9 @@ public class Calculator {
             } else {
                 System.out.println(CONTINUE_YES_NO_MSG);
             }
-
+            System.out.println(CONTINUE_QUESTION);
             String answer = scanner.nextLine();
-            userAnswer = insertCharData(CONTINUE_QUESTION, answer);
+            userAnswer = insertCharData(answer);
 
 
         } while (userAnswer != NO);
