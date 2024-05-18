@@ -27,15 +27,6 @@ public class Calculator {
 
                 splitExpressionToArrays(userExpression, numbersArray, operatorArr);
 
-//                for (int i = 0; i < amountNumbers; i++){
-//                    numbersArray[i] = insertDoubleData(ADD_NUMBER);
-//                    if (i != amountNumbers-1) {
-//                        operatorArr[i] = insertOperator(CHOSE_OPERATION);
-//                    }
-//
-//                }
-
-
                 String currentResult = stringResult (numbersArray, operatorArr, calculateResult (numbersArray, operatorArr));
                 printResult(currentResult);
                 saveHistory(currentResult);
@@ -45,8 +36,8 @@ public class Calculator {
                 System.out.println(CONTINUE_YES_NO_MSG);
             }
 
-
-            userAnswer = insertCharData(CONTINUE_QUESTION);
+            String answer = scanner.nextLine();
+            userAnswer = insertCharData(CONTINUE_QUESTION, answer);
 
 
         } while (userAnswer != NO);

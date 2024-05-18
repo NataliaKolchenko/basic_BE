@@ -9,25 +9,36 @@ package org.example;
 
 public class StringBuilderCars {
     public static void main(String[] args) {
-        StringBuilder queryCar = new StringBuilder("SELECT * FROM cars WHERE ");
-
-        String paramModel = "model";
+        String table = "car";
         String model = "V-60";
-        String paramCountry = "Country";
         String country = "Germany";
-        String paramCity = "City";
         String city = "Berlin";
-        String paramYear = "Year";
-        int year = 2000;
-        String paramActive = "Active";
-        boolean active = true;
+        String year = "2000";
+        String active = "true";
+
+        StringBuilder queryCar = new StringBuilder();
+        queryCar.append("SELECT");
+        queryCar.append(" * ");
+        queryCar.append("FROM ");
+        queryCar.append(table);
+        queryCar.append(" WHERE ");
+        queryCar.append(model != null ? "model = '" + model + "' AND " : "");
+        queryCar.append(country != null ? "country = '" + country + "' AND " : "");
+        queryCar.append(city != null ? "city = '" + city + "' AND " : "");
+        queryCar.append(year != null ? "year = '" + year + "' AND " : "");
+        queryCar.append(active != null ? "active = '" + active + "'" : "");
 
 
-
-        queryCar.append(paramCountry + " = \'" + country + "\' AND " + paramCity + " = \'" + city + "\' AND "  + paramModel + " = \'" + model + "\' AND "
-                + paramYear + " = \'" + year + "\' AND "  + paramActive + " = \'" + active + "\'");
 
         System.out.println(queryCar);
+
+
+
+
+//        queryCar.append(paramCountry + " = \'" + country + "\' AND " + paramCity + " = \'" + city + "\' AND "  + paramModel + " = \'" + model + "\' AND "
+//                + paramYear + " = \'" + year + "\' AND "  + paramActive + " = \'" + active + "\'");
+//
+//        System.out.println(queryCar);
 
 
 
