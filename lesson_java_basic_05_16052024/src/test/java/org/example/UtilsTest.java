@@ -45,7 +45,7 @@ class UtilsTest {
         assertEquals('Y',insertCharData(CONTINUE_QUESTION,userStr));
     }
 
-    @org.junit.jupiter.api.Test
+    @Test
     void calculateResult() {
     }
 
